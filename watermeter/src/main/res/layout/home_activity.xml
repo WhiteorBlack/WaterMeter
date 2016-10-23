@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="@color/blue">
+
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="waterClick"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/back_arrow" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/titleTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="智能用水" />
+
+        <FrameLayout
+            android:id="@+id/fl_edit_user_info"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:onClick="waterClick">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/edit_user_info" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/white"
+        android:onClick="waterClick"
+        android:paddingBottom="11dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="11dp">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@mipmap/logo" />
+
+        <TextView
+            android:id="@+id/txt_show_name"
+            style="@style/contentGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img_logo"
+            android:text="户主:" />
+
+        <TextView
+            android:id="@+id/txt_user_name"
+            style="@style/contentBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/txt_show_name"
+            android:text="户主" />
+
+        <TextView
+            android:id="@+id/txt_show_money"
+            style="@style/contentGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img_logo"
+            android:text="当前金额:" />
+
+        <TextView
+            android:id="@+id/txt_current_money"
+            style="@style/contentOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/txt_show_money"
+            android:text="0.00" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/right_arrow" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/titleTextGray"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginLeft="15dp"
+        android:drawableLeft="@mipmap/user_info"
+        android:drawablePadding="14dp"
+        android:gravity="center_vertical"
+        android:text="账户信息" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            style="@style/contentGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="表编号:" />
+
+        <TextView
+            android:id="@+id/txt_form_no"
+            style="@style/contentBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="2222" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            style="@style/contentGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最后抄表时间:" />
+
+        <TextView
+            android:id="@+id/txt_last_check_time"
+            style="@style/contentBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="2015" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            style="@style/contentGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最后抄表读数:" />
+
+        <TextView
+            android:id="@+id/txt_last_check_no"
+            style="@style/contentBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="2015" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/fl_msg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:onClick="waterClick">
+
+            <TextView
+                style="@style/contentGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/message"
+                android:text="消息通知" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_consume_record"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:onClick="waterClick">
+
+            <TextView
+                style="@style/contentGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/consume_record"
+                android:text="消费记录" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_recharge_record"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:onClick="waterClick">
+
+            <TextView
+                style="@style/contentGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/recharge_record"
+                android:text="充值记录" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_recharge_online"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:onClick="waterClick">
+
+            <TextView
+                style="@style/contentGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/recharge_online"
+                android:text="在线充值" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

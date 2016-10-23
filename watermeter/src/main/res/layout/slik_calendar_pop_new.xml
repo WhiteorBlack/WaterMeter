@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.android.blm.watermeter.widget.silkcalendar.DayPickerView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@color/blue"
+        app:colorNormalDay="@color/white"
+        app:colorSelectedDayBackground="@color/white"
+        app:colorMonthName="@color/white"
+        app:colorSelectedDayText="@color/blue" />
+
+</LinearLayout>

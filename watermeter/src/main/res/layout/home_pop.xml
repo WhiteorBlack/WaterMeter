@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:orientation="vertical"
+    android:paddingRight="15dp">
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="6dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        android:background="@mipmap/arrow_top_blue" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_radius"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_change_pwd"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:onClick="waterClick">
+
+            <TextView
+                style="@style/contentWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/edit_user_info"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="修改密码" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_switch_user"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="1dp"
+            android:background="#4980C2"
+            android:onClick="waterClick">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <TextView
+                style="@style/contentWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/system_msg_edit"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="更换用户" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_logout"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="1dp"
+            android:onClick="waterClick">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <TextView
+                style="@style/contentWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/logout"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="安全退出" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

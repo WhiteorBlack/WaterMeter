@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">@android:color/white</color>
+    <color name="blue">#5E9FEC</color>
+    <color name="backgroud">#F4F2F3</color>
+    <color name="orange">#DD7432</color>
+    <color name="gray">#5A5F65</color>
+    <color name="calendarWeekColor">#CDE6F8</color>
+
+    <color name="calendar_active_month_bg">#5E9FEC</color>
+    <color name="calendar_bg">#ffffffff</color>
+    <color name="calendar_divider">#ffbababa</color>
+    <color name="calendar_inactive_month_bg">#5E9FEC</color>
+    <color name="calendar_selected_day_bg">#ffffffff</color>
+    <color name="calendar_highlighted_day_bg">#ccffcc</color>
+    <color name="calendar_selected_range_bg">#ff96caff</color>
+    <color name="calendar_text_inactive">#CDE6F8</color>
+    <color name="calendar_text_active">#ffffffff</color>
+    <color name="calendar_text_selected">#5E9FEC</color>
+    <color name="calendar_text_unselectable">#CDE6F8</color>
+    <color name="calendar_text_highlighted">#ff778088</color>
+
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <color name="bgColor_overlay_black">#95000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_svprogressdefaultview">@android:color/white</color>
+    <!--标题颜色-->
+    <color name="textColor_svprogresshuddefault_msg">#000000</color>
+    <color name="roundColor_svprogresshuddefault">#e5e5e5</color>
+    <color name="roundProgressColor_svprogresshuddefault">@android:color/black</color>
+    <color name="normal_day">#424242</color>
+    <color name="selected_day_background">#03A9F4</color>
+    <color name="selected_day_text">#FFFFFF</color>
+    <color name="month_day_label_text">#757575</color>
+    <color name="weekends_day">#BDBDBD</color>
+    <color name="current_day_background">#DDDDDD</color>
+    <color name="normal_month">#03A9F4</color>
+</resources>

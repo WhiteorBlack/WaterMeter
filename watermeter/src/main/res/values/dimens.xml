@@ -1,0 +1,33 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="calendar_day_headers_paddingbottom">4dp</dimen>
+    <dimen name="calendar_month_topmargin">16dp</dimen>
+    <dimen name="calendar_month_title_bottommargin">4dp</dimen>
+    <dimen name="calendar_text_medium">18sp</dimen>
+    <dimen name="calendar_text_small">14sp</dimen>
+
+    <!--padding-->
+    <dimen name="padding_svprogresshuddefault">15dp</dimen>
+    <!--窗口最小宽度-->
+    <dimen name="size_minwidth_svprogresshuddefault">120dp</dimen>
+    <!--图片宽高-->
+    <dimen name="size_image_bigloading">80dp</dimen>
+    <!--图片宽高-->
+    <dimen name="size_image_smallloading">60dp</dimen>
+    <!--圆角-->
+    <dimen name="radius_svprogresshuddefault">25px</dimen>
+    <!--提示的文字大小-->
+    <dimen name="textSize_svprogresshuddefault_msg">15sp</dimen>
+    <dimen name="margintop_svprogresshuddefault_msg">10dp</dimen>
+    <dimen name="text_size_day">14sp</dimen>
+    <dimen name="text_size_month">12sp</dimen>
+    <dimen name="text_size_day_name">14sp</dimen>
+    <dimen name="header_month_height">34dip</dimen>
+    <dimen name="selected_day_radius">16dip</dimen>
+    <dimen name="event_dots_radius">2.5dp</dimen>
+    <dimen name="calendar_height">270dip</dimen>
+    <dimen name="month_info_text_size">24sp</dimen>
+    <dimen name="textandiconmargin">10dp</dimen>
+</resources>

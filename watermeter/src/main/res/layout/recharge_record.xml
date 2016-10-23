@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue">
+
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="waterClick">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/back_arrow" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/titleTextWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="充值记录" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_start_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="waterClick"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/contentGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始时间" />
+
+            <TextView
+                android:id="@+id/txt_start_date"
+                style="@style/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/line_vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_end_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="waterClick"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/contentGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束时间" />
+
+            <TextView
+                android:id="@+id/txt_end_date"
+                style="@style/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.android.blm.watermeter.widget.xrecycleview.XRecyclerView
+        android:id="@+id/recyclerView_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txt_total_money"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        style="@style/secondTitleWhite"
+        android:background="@color/orange"
+        android:gravity="center"/>
+</LinearLayout>
