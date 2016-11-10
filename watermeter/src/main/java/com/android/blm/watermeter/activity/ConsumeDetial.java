@@ -29,7 +29,7 @@ import java.util.Map;
 
 /**
  * author:${白曌勇} on 2016/6/1
- * TODO:
+ * TODO:消费详情
  */
 public class ConsumeDetial extends BaseActivity {
     private ListViewNestification listViewDetial, listViewFee;
@@ -63,26 +63,26 @@ public class ConsumeDetial extends BaseActivity {
                 if (bean_ConsumeDetial != null && TextUtils.equals(bean_ConsumeDetial.Result, "1") && bean_ConsumeDetial.Data != null && bean_ConsumeDetial.Data.size() > 0) {
                     feeList.addAll(bean_ConsumeDetial.Data.get(0).FareDetail);
                     feeAdapter.notifyDataSetChanged();
-                    Bean_ConsumeDetial.UsedDetial usedDetial=new Bean_ConsumeDetial.UsedDetial();
-                    usedDetial.UseType="第一阶梯";
-                    usedDetial.UseCount=bean_ConsumeDetial.Data.get(0).UseNumber1;
+                    Bean_ConsumeDetial.UsedDetial usedDetial = new Bean_ConsumeDetial.UsedDetial();
+                    usedDetial.UseType = "第一阶梯";
+                    usedDetial.UseCount = bean_ConsumeDetial.Data.get(0).UseNumber1;
                     consumeList.add(usedDetial);
 
-                    Bean_ConsumeDetial.UsedDetial usedDetial2=new Bean_ConsumeDetial.UsedDetial();
-                    usedDetial2.UseType="第二阶梯";
-                    usedDetial2.UseCount=bean_ConsumeDetial.Data.get(0).UseNumber2;
+                    Bean_ConsumeDetial.UsedDetial usedDetial2 = new Bean_ConsumeDetial.UsedDetial();
+                    usedDetial2.UseType = "第二阶梯";
+                    usedDetial2.UseCount = bean_ConsumeDetial.Data.get(0).UseNumber2;
                     consumeList.add(usedDetial2);
 
-                    Bean_ConsumeDetial.UsedDetial usedDetial3=new Bean_ConsumeDetial.UsedDetial();
-                    usedDetial3.UseType="第三阶梯";
-                    usedDetial3.UseCount=bean_ConsumeDetial.Data.get(0).UseNumber3;
+                    Bean_ConsumeDetial.UsedDetial usedDetial3 = new Bean_ConsumeDetial.UsedDetial();
+                    usedDetial3.UseType = "第三阶梯";
+                    usedDetial3.UseCount = bean_ConsumeDetial.Data.get(0).UseNumber3;
                     consumeList.add(usedDetial3);
                     detialAdapter.notifyDataSetChanged();
 
-                    txtPreLeft.setText("¥"+bean_ConsumeDetial.Data.get(0).LastBalance);
-                    txtCurrentLeft.setText("¥"+bean_ConsumeDetial.Data.get(0).ThisBalance);
-                }else
-                    Tools.toastMsg(ConsumeDetial.this,bean_ConsumeDetial.Message);
+                    txtPreLeft.setText("¥" + Tools.formatDouble(bean_ConsumeDetial.Data.get(0).LastBalance));
+                    txtCurrentLeft.setText("¥" + Tools.formatDouble(bean_ConsumeDetial.Data.get(0).ThisBalance));
+                } else
+                    Tools.toastMsg(ConsumeDetial.this, bean_ConsumeDetial.Message);
             }
         }
     };

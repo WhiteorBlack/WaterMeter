@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.android.blm.watermeter.R;
 import com.android.blm.watermeter.bean.Bean_RechargeRecord;
+import com.android.blm.watermeter.utils.Tools;
 
 import java.util.List;
 
@@ -69,7 +70,7 @@ public class RechargeRecordAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             });
         }
         Bean_RechargeRecord.RechargeRecord rechargeRecord = dataList.get(position);
-        mHolder.txtRechargeMoney.setText("¥" + rechargeRecord.PayMoney);
+        mHolder.txtRechargeMoney.setText("¥" + Tools.formatDouble(rechargeRecord.PayMoney));
         mHolder.txtRechargeDate.setText(rechargeRecord.OperDate);
 
     }

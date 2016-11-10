@@ -17,19 +17,19 @@ public class Bean_ConsumeDetial {
         public String UseNumber1;
         public String UseNumber2;
         public String UseNumber3;
-        public String ThisBalance;
-        public String LastBalance;
+        public double ThisBalance;
+        public double LastBalance;
         public List<FareDetial> FareDetail;
     }
 
     public static class FareDetial {
         public String FareName;
-        public String FareMoney;
+        public double FareMoney;
     }
 
     public static class UsedDetial {
         public String UseType;
         public String UseCount;
-        public String price;
+        public double price;
     }
 }

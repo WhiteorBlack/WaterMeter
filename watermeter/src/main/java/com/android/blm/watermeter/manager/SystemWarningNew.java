@@ -203,7 +203,7 @@ public class SystemWarningNew extends BaseActivity {
         }
     };
 
-    private String type = "";
+    private String type = "3";
 
     private void getHasRead() {
         SVProgressHUD.showWithStatus(SystemWarningNew.this, "加载中...", SVProgressHUD.SVProgressHUDMaskType.Clear);

@@ -121,6 +121,7 @@ public class SystemUnreadFragment extends Fragment implements SwipeMenuListView.
         loginParam.put("Code", AppPrefrence.getUserPhone(getActivity()));
         loginParam.put("Token", AppPrefrence.getToken(getActivity()));
         params.put("Type", type);
+        params.put("Flag","1");
         params.put("PublishTime", DateTime.now().toString("yyyy-MM-dd"));
         PostTools.postDataBySoap(getActivity(), "GetNoticeList", loginParam, params, handler, 0);
     }

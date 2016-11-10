@@ -20,10 +20,13 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import com.android.blm.watermeter.activity.RechargeOnline;
+
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -93,6 +96,11 @@ public class Tools {
             e.printStackTrace();
         }
 
+    }
+
+    public static String formatDouble(double doubles) {
+        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+        return decimalFormat.format(doubles);
     }
 
     /**
@@ -333,10 +341,10 @@ public class Tools {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date date;
-        long timeLong=0l;
+        long timeLong = 0l;
         try {
             date = sdf.parse(time);
-             timeLong = date.getTime();
+            timeLong = date.getTime();
 //            timeString = String.valueOf(timeLong / 1000);
         } catch (Exception e) {
             // TODO: handle exception

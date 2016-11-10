@@ -16,7 +16,7 @@ public class Bean_RechargeRecord {
         public String OperID;
         public String OperDate;
         public String LastBalance;
-        public float PayMoney;
+        public double PayMoney;
         public String ThisBalance;
     }
 }

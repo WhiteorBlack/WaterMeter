@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.android.blm.watermeter.R;
 import com.android.blm.watermeter.bean.Bean_ConsumeDetial;
+import com.android.blm.watermeter.utils.Tools;
 
 import java.util.List;
 
@@ -54,7 +55,7 @@ public class ConsumeDetialFeeAdapter extends BaseAdapter {
             holder = (Holder) convertView.getTag();
         }
         Bean_ConsumeDetial.FareDetial fareDetial = dataList.get(position);
-        holder.txtFee.setText("¥" + fareDetial.FareMoney);
+        holder.txtFee.setText("¥" + Tools.formatDouble(fareDetial.FareMoney));
         holder.txtType.setText(fareDetial.FareName);
         return convertView;
     }
