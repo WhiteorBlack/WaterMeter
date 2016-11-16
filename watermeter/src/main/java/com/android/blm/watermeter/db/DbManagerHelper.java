@@ -4,10 +4,14 @@ import android.app.Application;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.text.TextUtils;
 
 import com.android.blm.watermeter.WaterApplication;
 import com.android.blm.watermeter.bean.Bean_SystemList;
 import com.android.blm.watermeter.bean.Bean_SystemWarning;
+import com.android.blm.watermeter.utils.Tools;
+
+import org.joda.time.DateTime;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +68,32 @@ public class DbManagerHelper {
     }
 
     /**
+     * 获取最新系统消息,以处理消息未读逻辑
+     *
+     * @param userCode
+     * @return
+     */
+    synchronized public long getMsgTime(String userCode) {
+        String sql = "select * from " + DbParams.SYSTEM_TABLE + " where " + DbParams.USERCODE + "=" + "\"" + userCode + "\"" + " limit " + String.valueOf(1) + " offset " + String.valueOf(0);
+        SQLiteDatabase db = dbOpenHelper.getReadableDatabase();
+        String time = "";
+        if (db.isOpen()) {
+            Cursor cursor = db.rawQuery(sql, null);
+            if (cursor == null)
+                return System.currentTimeMillis();
+            while (cursor.moveToNext()) {
+                try {
+                    time = cursor.getString(cursor.getColumnIndex(DbParams.PUBLISHTIME));
+                } catch (Exception e) {
+                    return System.currentTimeMillis();
+                }
+            }
+        } else return System.currentTimeMillis();
+
+        return TextUtils.isEmpty(time) ? System.currentTimeMillis() : Tools.dateToLong(time);
+    }
+
+    /**
      * 分页获取系统消息信息
      *
      * @param userCode
@@ -73,7 +103,7 @@ public class DbManagerHelper {
      */
     synchronized public List<Bean_SystemList.SystemList> getSystemList(String userCode, int pageIndex, int pageSize) {
         List<Bean_SystemList.SystemList> systemList = new ArrayList<>();
-        String sql = "select * from " + DbParams.SYSTEM_TABLE + " where " + DbParams.USERCODE + "=" + "\""+userCode+"\"" + " limit " + String.valueOf(pageSize) + " offset " + String.valueOf(pageIndex * pageSize);
+        String sql = "select * from " + DbParams.SYSTEM_TABLE + " where " + DbParams.USERCODE + "=" + "\"" + userCode + "\"" + " limit " + String.valueOf(pageSize) + " offset " + String.valueOf(pageIndex * pageSize);
         SQLiteDatabase db = dbOpenHelper.getReadableDatabase();
         if (db.isOpen()) {
             Cursor cursor = db.rawQuery(sql, null);
@@ -101,7 +131,7 @@ public class DbManagerHelper {
         SQLiteDatabase db = dbOpenHelper.getReadableDatabase();
         int count = 0;
         if (db.isOpen()) {
-            Cursor curosr = db.rawQuery("select * from " + DbParams.SYSTEM_TABLE + " where " + DbParams.USERCODE + "=" + "\""+userCode+"\"", null);
+            Cursor curosr = db.rawQuery("select * from " + DbParams.SYSTEM_TABLE + " where " + DbParams.USERCODE + "=" + "\"" + userCode + "\"", null);
             count = curosr.getCount();
             curosr.close();
         }
@@ -163,7 +193,7 @@ public class DbManagerHelper {
     synchronized public List<Bean_SystemWarning.SystemWarnings> getWarningList(String userCode, int pageIndex, int pageSize) {
         List<Bean_SystemWarning.SystemWarnings> warningList = new ArrayList<>();
         SQLiteDatabase db = dbOpenHelper.getReadableDatabase();
-        String sql = "select * from " + DbParams.WARNING_TABLE + " where " + DbParams.USERCODE + "=" + "\""+userCode+"\"" + " limit " + String.valueOf(pageSize) + " offset " + String.valueOf(pageIndex * pageSize);
+        String sql = "select * from " + DbParams.WARNING_TABLE + " where " + DbParams.USERCODE + "=" + "\"" + userCode + "\"" + " limit " + String.valueOf(pageSize) + " offset " + String.valueOf(pageIndex * pageSize);
         if (db.isOpen()) {
             Cursor cursor = db.rawQuery(sql, null);
             while (cursor.moveToNext()) {

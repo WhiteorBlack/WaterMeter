@@ -31,6 +31,8 @@ import com.android.blm.watermeter.widget.swipelistview.SwipeMenuListView;
 import com.google.gson.Gson;
 
 import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.DateTimeFormatterBuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -101,9 +103,16 @@ public class SystemUnreadFragment extends Fragment implements SwipeMenuListView.
             if (TextUtils.isEmpty(result)) {
                 Tools.toastMsg(getActivity(), "请检查网络后重试");
             } else {
+
                 bean_SystemList = new Gson().fromJson(result, Bean_SystemList.class);
                 if (bean_SystemList != null && TextUtils.equals(bean_SystemList.Result, "1") && bean_SystemList.Data != null && bean_SystemList.Data.size() > 0) {
-                    systemList.addAll(bean_SystemList.Data);
+                    for (int i = 0; i < bean_SystemList.Data.size(); i++) {
+                        Tools.debug("sys" + DbManagerHelper.getInstance().getMsgTime(AppPrefrence.getUsercode(getContext())) + "getdata" + Tools.dateToLong(bean_SystemList.Data.get(i).PublishTime));
+                        if (DbManagerHelper.getInstance().getMsgTime(AppPrefrence.getUsercode(getContext())) < Tools.dateToLong(bean_SystemList.Data.get(i).PublishTime)) {
+                            systemList.add(bean_SystemList.Data.get(i));
+                        }
+                    }
+//                    systemList.addAll(bean_SystemList.Data);
                     setUnread(systemList.size());
                     DbManagerHelper.getInstance().saveSystemList(systemList, AppPrefrence.getUsercode(getActivity()));
                 }
@@ -121,7 +130,7 @@ public class SystemUnreadFragment extends Fragment implements SwipeMenuListView.
         loginParam.put("Code", AppPrefrence.getUserPhone(getActivity()));
         loginParam.put("Token", AppPrefrence.getToken(getActivity()));
         params.put("Type", type);
-        params.put("Flag","1");
+        params.put("Flag", "1");
         params.put("PublishTime", DateTime.now().toString("yyyy-MM-dd"));
         PostTools.postDataBySoap(getActivity(), "GetNoticeList", loginParam, params, handler, 0);
     }
@@ -142,7 +151,7 @@ public class SystemUnreadFragment extends Fragment implements SwipeMenuListView.
             Iterator<Bean_SystemList.SystemList> iter = systemList.iterator();
             while (iter.hasNext()) {
                 Bean_SystemList.SystemList system = iter.next();
-                updateState(system.ID+"");
+                updateState(system.ID + "");
                 delete.add(system.ID + "");
                 if (system.isSelect) {
                     iter.remove();
@@ -160,7 +169,7 @@ public class SystemUnreadFragment extends Fragment implements SwipeMenuListView.
             Iterator<Bean_SystemList.SystemList> iter = systemList.iterator();
             while (iter.hasNext()) {
                 Bean_SystemList.SystemList system = iter.next();
-                updateState(system.ID+"");
+                updateState(system.ID + "");
                 if (system.isSelect) {
                     iter.remove();
                 }

@@ -351,6 +351,28 @@ public class Tools {
         }
         return timeLong;
     }
+    /**
+     * 将时间字符串转换成时间戳
+     *
+     * @param time
+     * @return
+     * @author baizy
+     * @todo TODO
+     */
+    public static long dateToLong(String time) {
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date;
+        long timeLong = 0l;
+        try {
+            date = sdf.parse(time);
+            timeLong = date.getTime();
+//            timeString = String.valueOf(timeLong / 1000);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        return timeLong;
+    }
 
     public static String timeStringToLong(String time) {
         String timeString = "";
