@@ -89,8 +89,26 @@ public class ChangePasswordUser extends BaseActivity {
                     return;
                 }
                 getCode();
+                countDown();
                 break;
         }
+    }
+
+    private void countDown() {
+        new CountDownTimer(60 * 1000, 1000) {
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                txtGetCode.setClickable(false);
+                txtGetCode.setText(millisUntilFinished / 1000 + "秒后重试");
+            }
+
+            @Override
+            public void onFinish() {
+                txtGetCode.setClickable(true);
+                txtGetCode.setText("重新获取");
+            }
+        }.start();
     }
 
     private void getCode() {
@@ -117,18 +135,7 @@ public class ChangePasswordUser extends BaseActivity {
                     try {
                         JSONObject object = new JSONObject(result);
                         if (TextUtils.equals(object.getString("Result"), "1")) {
-                            new CountDownTimer(60 * 1000, 1000) {
 
-                                @Override
-                                public void onTick(long millisUntilFinished) {
-                                    txtGetCode.setText(millisUntilFinished / 1000 + "秒后重试");
-                                }
-
-                                @Override
-                                public void onFinish() {
-                                    txtGetCode.setText("重新获取");
-                                }
-                            }.start();
                         }
                         Tools.toastMsg(ChangePasswordUser.this, object.getString("Message"));
                     } catch (Exception e) {

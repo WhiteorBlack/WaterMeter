@@ -100,6 +100,8 @@ public class SplashActivity extends AppCompatActivity {
                     AppPrefrence.setUsercode(SplashActivity.this, loginIfno.Data.get(0).OperatorCode);
                     AppPrefrence.setUserName(SplashActivity.this, loginIfno.Data.get(0).OperatorName);
                 }
+            }else {
+                AppPrefrence.setIsLogin(SplashActivity.this,false);
             }
         }
     };
