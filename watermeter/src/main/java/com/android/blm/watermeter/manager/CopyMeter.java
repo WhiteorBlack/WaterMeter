@@ -230,6 +230,9 @@ public class CopyMeter extends BaseActivity implements XListView.IXListViewListe
         if (meterList != null && meterList.size() > 0) {
             DeptName = meterList.get(meterList.size() - 1).DeptName;
             isFirst = true;
+        }else {
+            DeptName="-1";
+            isFirst=false;
         }
         for (int i = 0; i < bean_ownMoneyUser.Data.size(); i++) {
             if (TextUtils.equals(DeptName, bean_ownMoneyUser.Data.get(i).DeptName)) {
@@ -294,6 +297,7 @@ public class CopyMeter extends BaseActivity implements XListView.IXListViewListe
         edtSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                pageIndex=1;
                 getSearchData();
                 return false;
             }
@@ -379,6 +383,7 @@ public class CopyMeter extends BaseActivity implements XListView.IXListViewListe
                 typePop.showAsDropDown(txtType, Tools.dip2px(CopyMeter.this, 5), -5);
                 break;
             case R.id.fl_search:
+                pageIndex=1;
                 getSearchData();
                 break;
         }

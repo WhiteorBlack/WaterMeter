@@ -17,6 +17,7 @@ import com.android.blm.watermeter.BaseActivity;
 import com.android.blm.watermeter.Home;
 import com.android.blm.watermeter.ManagerHome;
 import com.android.blm.watermeter.R;
+import com.android.blm.watermeter.SplashActivity;
 import com.android.blm.watermeter.bean.Bean_LoginIfno;
 import com.android.blm.watermeter.utils.AppPrefrence;
 import com.android.blm.watermeter.utils.PostTools;
@@ -162,11 +163,13 @@ public class LoginByMsgActivity extends BaseActivity {
                         AppPrefrence.setUsercode(LoginByMsgActivity.this, loginIfno.Data.get(1).UserCode);
                         AppPrefrence.setDoorno(LoginByMsgActivity.this, loginIfno.Data.get(1).Doorplate);
                         AppPrefrence.setRealName(LoginByMsgActivity.this, loginIfno.Data.get(1).UserName);
+                        AppPrefrence.setUserPhone(LoginByMsgActivity.this, loginIfno.Data.get(1).UserCode);
                         AppPrefrence.setUserAdd(LoginByMsgActivity.this, loginIfno.Data.get(1).Address);
                         AppPrefrence.setUserReadDate(LoginByMsgActivity.this, loginIfno.Data.get(1).LastReadDate);
                         AppPrefrence.setUserReadNo(LoginByMsgActivity.this, loginIfno.Data.get(1).LastReadNumber);
                         AppPrefrence.setUserReserve(LoginByMsgActivity.this, loginIfno.Data.get(1).Reserve);
                         AppPrefrence.setMeterNo(LoginByMsgActivity.this, loginIfno.Data.get(1).MeterAddr);
+                        AppPrefrence.setPhone(LoginByMsgActivity.this,loginIfno.Data.get(1).Phone);
                         startActivity(new Intent(LoginByMsgActivity.this, Home.class));
                     }
                 } else {

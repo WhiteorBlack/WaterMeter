@@ -177,6 +177,7 @@ public class LoginActivity extends BaseActivity {
                         AppPrefrence.setUserReadNo(LoginActivity.this, loginIfno.Data.get(1).LastReadNumber);
                         AppPrefrence.setUserReserve(LoginActivity.this, loginIfno.Data.get(1).Reserve);
                         AppPrefrence.setMeterNo(LoginActivity.this, loginIfno.Data.get(1).MeterAddr);
+                        AppPrefrence.setPhone(LoginActivity.this,loginIfno.Data.get(1).Phone);
                         startActivity(new Intent(LoginActivity.this, Home.class));
                     }
                 } else {

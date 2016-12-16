@@ -52,13 +52,14 @@
             android:visibility="gone" />
 
 
-        <EditText
+        <TextView
             android:id="@+id/edi_old_pwd"
             style="@style/contentBlack"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@null"
+            android:gravity="center_vertical"
             android:hint="请输入手机号码"
             android:inputType="number"
             android:paddingLeft="10dp"

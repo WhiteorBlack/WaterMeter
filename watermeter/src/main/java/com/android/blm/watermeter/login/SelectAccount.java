@@ -107,6 +107,7 @@ public class SelectAccount extends BaseActivity {
                 AppPrefrence.setIsLogin(SelectAccount.this, true);
                 AppPrefrence.setToken(SelectAccount.this, bean_loginIfno.Data.get(0).Token);
                 AppPrefrence.setUsercode(SelectAccount.this, loginIfno.UserCode);
+                AppPrefrence.setUserPhone(SelectAccount.this, loginIfno.UserCode);
                 AppPrefrence.setDoorno(SelectAccount.this, loginIfno.Doorplate);
                 AppPrefrence.setRealName(SelectAccount.this, loginIfno.UserName);
                 AppPrefrence.setUserAdd(SelectAccount.this, loginIfno.Address);
@@ -114,6 +115,7 @@ public class SelectAccount extends BaseActivity {
                 AppPrefrence.setUserReadNo(SelectAccount.this, loginIfno.LastReadNumber);
                 AppPrefrence.setUserReserve(SelectAccount.this, loginIfno.Reserve);
                 AppPrefrence.setMeterNo(SelectAccount.this, loginIfno.MeterAddr);
+                AppPrefrence.setPhone(SelectAccount.this,loginIfno.Phone);
                 startActivity(new Intent(SelectAccount.this, Home.class));
                 finish();
             }

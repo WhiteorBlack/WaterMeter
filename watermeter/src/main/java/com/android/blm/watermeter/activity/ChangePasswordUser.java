@@ -29,8 +29,8 @@ import java.util.Map;
  */
 public class ChangePasswordUser extends BaseActivity {
     //    private TextInputLayout inputOldPwd, inputNewPwd, inputCheckPwd;
-    private EditText edtOldPwd, edtNewPwd, edtCheckPwd, edtCode;
-    private TextView txtGetCode;
+    private EditText  edtNewPwd, edtCheckPwd, edtCode;
+    private TextView edtOldPwd,txtGetCode;
     private String oldPwd, newPwd, checkPwd, phoneString;
     private String type = "2";
 
@@ -40,6 +40,8 @@ public class ChangePasswordUser extends BaseActivity {
         setContentView(R.layout.change_pwd_user);
 //        type = getIntent().getStringExtra("type");
         initView();
+        countDown();
+        getCode();
     }
 
     private void initView() {
@@ -47,8 +49,9 @@ public class ChangePasswordUser extends BaseActivity {
 
         edtCheckPwd = (EditText) findViewById(R.id.edi_new_check_pwd);
         edtNewPwd = (EditText) findViewById(R.id.edi_new_pwd);
-        edtOldPwd = (EditText) findViewById(R.id.edi_old_pwd);
+        edtOldPwd = (TextView) findViewById(R.id.edi_old_pwd);
         edtCode = (EditText) findViewById(R.id.edit_code);
+        edtOldPwd.setText(AppPrefrence.getPhone(this));
 
     }
 
@@ -117,7 +120,8 @@ public class ChangePasswordUser extends BaseActivity {
         Map<String, String> loginInfo = new HashMap<>();
         loginInfo.put("Phone", "");
         loginInfo.put("Code", "");
-        params.put("Phone", phoneString);
+        params.put("Phone", AppPrefrence.getPhone(this));
+        params.put("TypeID", "2");
         PostTools.postDataBySoap(this, "SendMsgCode", loginInfo, params, handler, 1);
 
     }
@@ -167,6 +171,5 @@ public class ChangePasswordUser extends BaseActivity {
         params.put("NewPwd", Tools.get32MD5Str(newPwd));
         params.put("LoginType", type);
         PostTools.postDataBySoap(this, "ModifyPwd", loginParams, params, handler, 0);
-        Tools.debug("Code->" + AppPrefrence.getUsercode(this) + "\\nToken->" + AppPrefrence.getToken(this) + "\\nOldPwd->" + oldPwd + "\\nNewPwd->" + Tools.get32MD5Str(newPwd) + "\\nLoginType->" + type);
     }
 }

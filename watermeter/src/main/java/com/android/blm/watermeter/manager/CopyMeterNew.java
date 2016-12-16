@@ -135,6 +135,7 @@ public class CopyMeterNew extends BaseActivity implements XListView.IXListViewLi
                     Tools.toastMsg(CopyMeterNew.this, bean_ownMoneyUser.Message);
                     isLoadMore=false;
                 }
+                copyUserNewAdapter.notifyDataSetChanged();
                 meterListView.setPullLoadEnable(isLoadMore);
                 SVProgressHUD.dismiss(CopyMeterNew.this);
             }

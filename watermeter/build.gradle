@@ -7,7 +7,8 @@ android {
         config {
             keyAlias 'water'
             keyPassword 'watermeter2016'
-            storeFile file('F:\\myProject\\WaterMeter\\watermeter.jks')
+//            storeFile file('F:\\myProject\\WaterMeter\\watermeter.jks')
+            storeFile file('E:\\androidApp\\WaterMeter\\watermeter.jks')
             storePassword 'watermeter2016'
         }
     }

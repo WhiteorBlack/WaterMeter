@@ -27,6 +27,7 @@ public class Bean_LoginIfno {
         public String MeterAddr;
         public String LastReadNumber;
         public String LastReadDate;
+        public String Phone;
 
     }
 }

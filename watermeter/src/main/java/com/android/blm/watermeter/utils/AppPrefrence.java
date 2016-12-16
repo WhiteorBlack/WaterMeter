@@ -28,6 +28,7 @@ public class AppPrefrence {
     private static final String USERPHONE = "userPhone";
     private static final String ISUSER = "isUser";
     private static final String ISBYMSG = "isByMsg";
+    private static final String PHONENUM="phoneNum";
     private static final String METERNO="meterNo";
 
     public static void setMeterNo(Context context,String meterNo){
@@ -69,6 +70,16 @@ public class AppPrefrence {
     public static String getUserPhone(Context context) {
         setting = getSp(context);
         return setting.getString(USERPHONE, "");
+    }
+
+    public static void setPhone(Context context, String phone) {
+        setting = getSp(context);
+        setting.edit().putString(PHONENUM, phone).commit();
+    }
+
+    public static String getPhone(Context context) {
+        setting = getSp(context);
+        return setting.getString(PHONENUM, "");
     }
 
     public static void setAccountCount(Context context, int count) {

@@ -84,6 +84,7 @@ public class SplashActivity extends AppCompatActivity {
                         startActivity(new Intent(SplashActivity.this, SelectAccount.class).putExtra("info", result).putExtra("isHome", true));
                     } else {
 //                        AppPrefrence.setAccountCount(SplashActivity.this, loginIfno.Data.get(1).Reserve+"");
+                        AppPrefrence.setUserPhone(SplashActivity.this, loginIfno.Data.get(1).UserCode);
                         AppPrefrence.setToken(SplashActivity.this, loginIfno.Data.get(0).Token);
                         AppPrefrence.setUsercode(SplashActivity.this, loginIfno.Data.get(1).UserCode);
                         AppPrefrence.setDoorno(SplashActivity.this, loginIfno.Data.get(1).Doorplate);
@@ -93,6 +94,7 @@ public class SplashActivity extends AppCompatActivity {
                         AppPrefrence.setUserReadNo(SplashActivity.this, loginIfno.Data.get(1).LastReadNumber);
                         AppPrefrence.setUserReserve(SplashActivity.this, loginIfno.Data.get(1).Reserve);
                         AppPrefrence.setMeterNo(SplashActivity.this, loginIfno.Data.get(1).MeterAddr);
+                        AppPrefrence.setPhone(SplashActivity.this,loginIfno.Data.get(1).Phone);
                     }
                 } else {
                     AppPrefrence.setIsUser(SplashActivity.this, false);
