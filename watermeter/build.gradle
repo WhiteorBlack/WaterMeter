@@ -5,11 +5,13 @@ android {
     buildToolsVersion "23.0.2"
     signingConfigs {
         config {
-            keyAlias 'water'
-            keyPassword 'watermeter2016'
+            keyAlias 'water2017'
+            keyPassword 'watermeter2017'
 //            storeFile file('F:\\myProject\\WaterMeter\\watermeter.jks')
-            storeFile file('E:\\androidApp\\WaterMeter\\watermeter.jks')
-            storePassword 'watermeter2016'
+//            storeFile file('E:\\androidApp\\WaterMeter\\watermeter.jks')
+            storeFile file('C:\\Users\\Administrator\\Desktop\\watermeter\\water2017.jks')
+            storePassword 'watermeter2017'
+//            storePassword 'watermeter2016'
         }
     }
     defaultConfig {
