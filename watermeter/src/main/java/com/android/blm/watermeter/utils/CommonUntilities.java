@@ -9,8 +9,8 @@ package com.android.blm.watermeter.utils;/**
 public class CommonUntilities {
     public static String MD5KEY = "";
     //    public static String MAIN_URL="http://203.171.233.49:8801/UserIPI.asmx";
-//    public static String MAIN_URL = "http://121.43.39.218:8081/";
-        public static String MAIN_URL="http://203.171.233.49:8801/";
+    public static String MAIN_URL = "http://121.43.39.218:8081/";
+//        public static String MAIN_URL="http://203.171.233.49:8801/";
     public static String NAME_SPACE = "http://www.hengyu.com/";
     public static boolean ISWXPAY = false;
 }
