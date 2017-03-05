@@ -84,7 +84,7 @@
             android:paddingRight="5dp" />
     </LinearLayout>
 
-    <com.android.blm.watermeter.widget.NoScrollViewPager
+    <com.android.blm.ymxn.widget.NoScrollViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

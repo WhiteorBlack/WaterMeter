@@ -87,12 +87,12 @@
             android:visibility="gone" />
     </LinearLayout>
 
-    <com.android.blm.watermeter.widget.LoadMoreRecyclerView
+    <com.android.blm.ymxn.widget.LoadMoreRecyclerView
         android:id="@+id/recyclerView_search"
         android:layout_width="match_parent"
         android:visibility="gone"
         android:layout_height="wrap_content" />
-    <com.android.blm.watermeter.widget.swipelistview.LJListView
+    <com.android.blm.ymxn.widget.swipelistview.LJListView
         android:id="@+id/ljlistview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

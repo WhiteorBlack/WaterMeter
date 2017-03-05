@@ -47,12 +47,12 @@
         android:background="@color/blue"
         android:orientation="vertical">
 
-        <com.android.blm.watermeter.widget.LinearLayoutForListView
+        <com.android.blm.ymxn.widget.LinearLayoutForListView
             android:id="@+id/recyclerView_week"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal"></com.android.blm.watermeter.widget.LinearLayoutForListView>
+            android:orientation="horizontal"></com.android.blm.ymxn.widget.LinearLayoutForListView>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView_date"
@@ -71,7 +71,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="15dp"></android.support.v7.widget.RecyclerView>
 
-        <com.android.blm.watermeter.widget.CalendarScrollView
+        <com.android.blm.ymxn.widget.CalendarScrollView
             android:id="@+id/calendarScrollView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.android.blm.watermeter.widget.CalendarView
+                <com.android.blm.ymxn.widget.CalendarView
                     android:id="@+id/calendar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -95,7 +95,7 @@
                     android:layout_height="15dp"
                     android:background="@mipmap/date" />
             </LinearLayout>
-        </com.android.blm.watermeter.widget.CalendarScrollView>
+        </com.android.blm.ymxn.widget.CalendarScrollView>
 
 
     </FrameLayout>

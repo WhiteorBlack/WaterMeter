@@ -97,7 +97,7 @@
     </LinearLayout>
 
 
-    <com.android.blm.watermeter.widget.swipelistview.LJListView
+    <com.android.blm.ymxn.widget.swipelistview.LJListView
         android:id="@+id/list_meter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
