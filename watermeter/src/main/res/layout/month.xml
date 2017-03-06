@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.android.blm.ymxn.widget.calendar.MonthView
+<com.android.blm.watermeter.widget.calendar.MonthView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:background="@color/blue"
@@ -16,12 +16,12 @@
       android:gravity="center_horizontal"
       style="@style/titleTextWhite"
       />
-  <com.android.blm.ymxn.widget.calendar.CalendarGridView
+  <com.android.blm.watermeter.widget.calendar.CalendarGridView
       android:id="@+id/calendar_grid"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       >
-    <com.android.blm.ymxn.widget.calendar.CalendarRowView
+    <com.android.blm.watermeter.widget.calendar.CalendarRowView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/calendar_day_headers_paddingbottom"
@@ -61,12 +61,12 @@
           android:layout_height="wrap_content"
           style="@style/CalendarCell.DayHeader"
           />
-    </com.android.blm.ymxn.widget.calendar.CalendarRowView>
+    </com.android.blm.watermeter.widget.calendar.CalendarRowView>
     <include layout="@layout/week"/>
     <include layout="@layout/week"/>
     <include layout="@layout/week"/>
     <include layout="@layout/week"/>
     <include layout="@layout/week"/>
     <include layout="@layout/week"/>
-  </com.android.blm.ymxn.widget.calendar.CalendarGridView>
-</com.android.blm.ymxn.widget.calendar.MonthView>
+  </com.android.blm.watermeter.widget.calendar.CalendarGridView>
+</com.android.blm.watermeter.widget.calendar.MonthView>

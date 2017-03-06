@@ -67,7 +67,7 @@
             style="@style/contentGray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="户名:" />
+            android:text="户号:" />
 
         <TextView
             android:id="@+id/txt_user_name"

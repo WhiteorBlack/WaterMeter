@@ -5,9 +5,9 @@
     android:background="@color/backgroud"
     android:orientation="vertical">
 
-    <com.android.blm.ymxn.widget.swipelistview.LJListView
+    <com.android.blm.watermeter.widget.swipelistview.LJListView
         android:id="@+id/ljlistview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </com.android.blm.ymxn.widget.swipelistview.LJListView>
+    </com.android.blm.watermeter.widget.swipelistview.LJListView>
 </LinearLayout>

@@ -56,7 +56,7 @@
             android:layout_toLeftOf="@id/listview_header_text"
             android:src="@drawable/ic_pulltorefresh_arrow" />
 
-        <com.android.blm.ymxn.widget.xrecycleview.SimpleViewSwithcer
+        <com.android.blm.watermeter.widget.xrecycleview.SimpleViewSwithcer
             android:id="@+id/listview_header_progressbar"
             android:layout_width="30dip"
             android:layout_height="30dip"

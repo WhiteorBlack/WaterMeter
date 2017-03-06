@@ -51,11 +51,11 @@
                 android:layout_marginTop="16dp"
                 android:text="明细用量" />
 
-            <com.android.blm.ymxn.widget.ListViewNestification
+            <com.android.blm.watermeter.widget.ListViewNestification
                 android:id="@+id/listview_used_detial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"></com.android.blm.ymxn.widget.ListViewNestification>
+                android:background="@color/white"></com.android.blm.watermeter.widget.ListViewNestification>
 
             <TextView
                 style="@style/titleTextGray"
@@ -66,7 +66,7 @@
                 android:layout_marginTop="16dp"
                 android:text="基本费用组成" />
 
-            <com.android.blm.ymxn.widget.ListViewNestification
+            <com.android.blm.watermeter.widget.ListViewNestification
                 android:id="@+id/listview_fee_detial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

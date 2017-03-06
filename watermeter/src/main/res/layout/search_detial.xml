@@ -205,7 +205,7 @@
                     android:text="仪表信息" />
             </LinearLayout>
 
-            <com.android.blm.ymxn.widget.ListViewNestification
+            <com.android.blm.watermeter.widget.ListViewNestification
                 android:id="@+id/list_meter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

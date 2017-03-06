@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.android.blm.ymxn.widget.calendar.CalendarPickerView
+    <com.android.blm.watermeter.widget.calendar.CalendarPickerView
         android:id="@+id/calendar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

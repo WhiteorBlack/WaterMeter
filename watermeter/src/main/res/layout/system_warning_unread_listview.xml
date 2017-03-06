@@ -5,13 +5,13 @@
     android:background="@color/backgroud"
     android:orientation="vertical">
 
-    <com.android.blm.ymxn.widget.swipelistview.LJListView
+    <com.android.blm.watermeter.widget.swipelistview.LJListView
         android:id="@+id/ljlistview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/backgroud"
         android:layout_weight="1">
-    </com.android.blm.ymxn.widget.swipelistview.LJListView>
+    </com.android.blm.watermeter.widget.swipelistview.LJListView>
     <LinearLayout
         android:id="@+id/ll_bottom"
         android:layout_width="match_parent"

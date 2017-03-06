@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.android.blm.ymxn.SplashActivity">
+    tools:context="com.android.blm.watermeter.SplashActivity">
 
     <ImageView
         android:id="@+id/img_splash_pic"

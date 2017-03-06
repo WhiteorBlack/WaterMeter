@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.android.blm.ymxn.widget.calendar.CalendarRowView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.android.blm.watermeter.widget.calendar.CalendarRowView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:background="@color/blue"
     android:layout_height="wrap_content">
 
-    <com.android.blm.ymxn.widget.calendar.CalendarCellView
+    <com.android.blm.watermeter.widget.calendar.CalendarCellView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.android.blm.ymxn.widget.calendar.CalendarCellView
+    <com.android.blm.watermeter.widget.calendar.CalendarCellView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.android.blm.ymxn.widget.calendar.CalendarCellView
+    <com.android.blm.watermeter.widget.calendar.CalendarCellView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.android.blm.ymxn.widget.calendar.CalendarCellView
+    <com.android.blm.watermeter.widget.calendar.CalendarCellView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.android.blm.ymxn.widget.calendar.CalendarCellView
+    <com.android.blm.watermeter.widget.calendar.CalendarCellView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.android.blm.ymxn.widget.calendar.CalendarCellView
+    <com.android.blm.watermeter.widget.calendar.CalendarCellView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.android.blm.ymxn.widget.calendar.CalendarCellView
+    <com.android.blm.watermeter.widget.calendar.CalendarCellView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-</com.android.blm.ymxn.widget.calendar.CalendarRowView>
+</com.android.blm.watermeter.widget.calendar.CalendarRowView>

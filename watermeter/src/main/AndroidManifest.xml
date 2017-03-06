@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.android.blm.ymxn">
+    package="com.android.blm.watermeter">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -35,14 +35,14 @@
     <uses-permission android:name="android.permission.BATTERY_STATS" />
 
     <application
-        android:name="com.android.blm.ymxn.WaterApplication"
+        android:name="com.android.blm.watermeter.WaterApplication"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.android.blm.ymxn.SplashActivity"
+            android:name="com.android.blm.watermeter.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -51,101 +51,101 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.blm.ymxn.Home"
+            android:name="com.android.blm.watermeter.Home"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.android.blm.ymxn.login.LoginActivity"
+            android:name="com.android.blm.watermeter.login.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.login.SelectAccount"
+            android:name="com.android.blm.watermeter.login.SelectAccount"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.android.blm.ymxn.login.LoginByMsgActivity"
+            android:name="com.android.blm.watermeter.login.LoginByMsgActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.activity.UserInfo"
+            android:name="com.android.blm.watermeter.activity.UserInfo"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.activity.ConsumeRecord"
+            android:name="com.android.blm.watermeter.activity.ConsumeRecord"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.activity.ConsumeRecordNew"
+            android:name="com.android.blm.watermeter.activity.ConsumeRecordNew"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.activity.ConsumeDetial"
+            android:name="com.android.blm.watermeter.activity.ConsumeDetial"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.activity.SystemMessage"
+            android:name="com.android.blm.watermeter.activity.SystemMessage"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.activity.SystemMsgDetial"
+            android:name="com.android.blm.watermeter.activity.SystemMsgDetial"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.activity.ChangePassword"
+            android:name="com.android.blm.watermeter.activity.ChangePassword"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.activity.RechargeOnline"
+            android:name="com.android.blm.watermeter.activity.RechargeOnline"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.activity.RechargeRecord"
+            android:name="com.android.blm.watermeter.activity.RechargeRecord"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.ManagerHome"
+            android:name="com.android.blm.watermeter.ManagerHome"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.SearchResult"
+            android:name="com.android.blm.watermeter.manager.SearchResult"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.SearchDetial"
+            android:name="com.android.blm.watermeter.manager.SearchDetial"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.ContralValve"
+            android:name="com.android.blm.watermeter.manager.ContralValve"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.CopyMeter"
+            android:name="com.android.blm.watermeter.manager.CopyMeter"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.OwenMoneyDetial"
+            android:name="com.android.blm.watermeter.manager.OwenMoneyDetial"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.OwnMoneyUsers"
+            android:name="com.android.blm.watermeter.manager.OwnMoneyUsers"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.SystemWarning"
+            android:name="com.android.blm.watermeter.manager.SystemWarning"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.SystemWarningDetial"
+            android:name="com.android.blm.watermeter.manager.SystemWarningDetial"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.CopyMeterDetial"
+            android:name="com.android.blm.watermeter.manager.CopyMeterDetial"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.CopyMeterNew"
+            android:name="com.android.blm.watermeter.manager.CopyMeterNew"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.activity.ChangePasswordUser"
+            android:name="com.android.blm.watermeter.activity.ChangePasswordUser"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
@@ -161,13 +161,13 @@
             android:exported="false"
             android:screenOrientation="behind" />
         <activity
-            android:name="com.android.blm.ymxn.wxapi.WXPayEntryActivity"
+            android:name="com.android.blm.watermeter.wxapi.WXPayEntryActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.android.blm.ymxn.manager.SystemWarningNew"
+            android:name="com.android.blm.watermeter.manager.SystemWarningNew"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
@@ -249,7 +249,7 @@
          
         <!-- YOUR_PACKAGE_PATH.CustomPushReceiver需要改为自己的Receiver： -->
         <receiver
-            android:name="com.android.blm.ymxn.receiver.MessageReceiver"
+            android:name="com.android.blm.watermeter.receiver.MessageReceiver"
             android:exported="true">
             <intent-filter>
 

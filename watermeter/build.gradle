@@ -5,17 +5,17 @@ android {
     buildToolsVersion "23.0.2"
     signingConfigs {
         config {
-            keyAlias 'ymxn'
-            keyPassword 'ymxn2017'
+            keyAlias 'water'
+            keyPassword 'watermeter2016'
 //            storeFile file('F:\\myProject\\WaterMeter\\watermeter.jks')
 //            storeFile file('E:\\androidApp\\WaterMeter\\watermeter.jks')
-            storeFile file('C:\\Users\\41508\\Documents\\MyProject\\WaterMeter\\ymxn.jks')
-            storePassword 'ymxn2017'
-//            storePassword 'watermeter2016'
+            storeFile file('C:\\Users\\41508\\Documents\\MyProject\\WaterMeter\\watermeter.jks')
+//            storePassword 'ymxn2017'
+            storePassword 'watermeter2016'
         }
     }
     defaultConfig {
-        applicationId "com.android.blm.ymxn"
+        applicationId "com.android.blm.watermeter"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
